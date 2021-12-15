@@ -20,6 +20,8 @@ def start():
 
 def check_digit_oneline():
   trans_no = input("Please enter a transaction number: ")
+  
+  # rewrite this line, asshole it's not readable!
   check_digit = ((sum([int(x) for x in list(str(trans_no[-1::-2]))]) * 3 + sum([int(x) for x in list(str(trans_no[-2::-2]))]))//10 + 1) * 10 - (sum([int(x) for x in list(str(trans_no[-1::-2]))]) * 3 + sum([int(x) for x in list(str(trans_no[-2::-2]))]))
   
   if check_digit == 10:
